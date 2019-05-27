@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Website", "Northw
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Models", "Northwind.Models\Northwind.Models.csproj", "{E79C7696-CBFD-4C25-8586-003A7BEF37E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Northwind.Desktop", "Northwind.Desktop\Northwind.Desktop.csproj", "{CC576365-1AF1-4B0F-A622-5B86CA7D86EF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{E79C7696-CBFD-4C25-8586-003A7BEF37E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E79C7696-CBFD-4C25-8586-003A7BEF37E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E79C7696-CBFD-4C25-8586-003A7BEF37E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CC576365-1AF1-4B0F-A622-5B86CA7D86EF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC576365-1AF1-4B0F-A622-5B86CA7D86EF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC576365-1AF1-4B0F-A622-5B86CA7D86EF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC576365-1AF1-4B0F-A622-5B86CA7D86EF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
