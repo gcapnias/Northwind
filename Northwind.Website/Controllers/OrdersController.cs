@@ -46,18 +46,38 @@ namespace Northwind.Website.Controllers
 
         // POST: Orders/Create
         [HttpPost]
-        public ActionResult Create(FormCollection collection)
+        public ActionResult Create(OrderBindingModel model)
         {
-            try
+            if (ModelState.IsValid)
             {
-                // TODO: Add insert logic here
+                try
+                {
+                    OrdersRepository r = new OrdersRepository(_db);
+                    Order entity = new Order();
 
-                return RedirectToAction("Index");
+                    entity.CustomerID = model.CustomerID;
+                    entity.EmployeeID = model.EmployeeID;
+                    entity.Freight = model.Freight;
+                    entity.OrderDate = model.OrderDate;
+                    entity.RequiredDate = model.RequiredDate;
+                    entity.ShipAddress = model.ShipAddress;
+                    entity.ShipCity = model.ShipCity;
+                    entity.ShipCountry = model.ShipCountry;
+                    entity.ShipName = model.ShipName;
+                    entity.ShippedDate = model.ShippedDate;
+                    entity.ShipPostalCode = model.ShipPostalCode;
+                    entity.ShipRegion = model.ShipRegion;
+                    entity.ShipVia = model.ShipVia;
+
+                    _db.SaveChanges();
+
+                    return RedirectToAction("Index");
+                }
+                catch (Exception ex)
+                { }
             }
-            catch
-            {
-                return View();
-            }
+
+            return View(model);
         }
 
         // GET: Orders/Edit/5
@@ -98,7 +118,7 @@ namespace Northwind.Website.Controllers
 
                     return RedirectToAction("Index");
                 }
-                catch
+                catch(Exception ex)
                 {
                 }
 
